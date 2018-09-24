@@ -40,6 +40,18 @@ class LoginFormController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        //получаем текст пароль
+        guard let login = loginInput.text, let password = passwordInput.text else {
+            print("Неуспешная авторизация")
+            return
+        }
+        
+        //  проверяем  верны  ли  они
+        if login  == "admin" && password == "123456" {
+            print("Успешная авторизация")
+        } else {
+            print("Неуспешная авторизация")
+        }
     }
     
     //клавиатура появляется
