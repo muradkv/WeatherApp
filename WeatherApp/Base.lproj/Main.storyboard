@@ -54,7 +54,6 @@
                                         <rect key="frame" x="165.5" y="351" width="44" height="30"/>
                                         <state key="normal" title="Войти"/>
                                         <connections>
-                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lGm-UX-YiL"/>
                                             <segue destination="NKJ-4s-M75" kind="show" id="UH6-4D-mAn"/>
                                         </connections>
                                     </button>
