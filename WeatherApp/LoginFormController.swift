@@ -76,4 +76,21 @@ class LoginFormController: UIViewController {
     @objc func  hideKeyboard() {
         self.scrollView?.endEditing(true)
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        //получаем текст пароль
+        guard let login = loginInput.text, let password = passwordInput.text else {
+            print("Ошибка")
+            return false
+        }
+        
+        //  проверяем  верны  ли  они
+        if login  == "admin" && password == "123456" {
+            print("Успешная авторизация")
+            return true
+        } else {
+            print("Неуспешная авторизация")
+            return false
+        }
+    }
 }
