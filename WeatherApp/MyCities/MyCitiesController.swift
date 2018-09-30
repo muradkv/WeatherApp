@@ -35,4 +35,31 @@ class MyCitiesController: UITableViewController {
             return UITableViewCell()
         }
     }
+    
+    @IBAction func addCity(segue: UIStoryboardSegue) {
+        //Проверяем идентификатор перехода, чтобы убедиться, что это нужный переход
+        if segue.identifier == "addCity" {
+            //Получаем ссылку на контроллер с которого осуществлен переход
+            let allCitiesController = segue.source as! AllCitiesController
+            //Получаем индекс выделенной ячейки
+            if let indexPath = allCitiesController.tableView.indexPathForSelectedRow {
+                //Получаем город по индексу
+                let city = allCitiesController.citiesArray[indexPath.row]
+                //Проверяем что такого города нет в списке
+                if !citiesArray.contains(city) {
+                    //Добавляем город в список выбранных
+                    citiesArray.append(city)
+                    //Обновляем таблицу
+                    tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            citiesArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }

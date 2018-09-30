@@ -267,6 +267,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cityName" destination="nDi-Wt-j3o" id="x0P-p3-Z5u"/>
+                                    <segue destination="xzm-M4-guR" kind="unwind" identifier="addCity" unwindAction="addCityWithSegue:" id="2Bs-z3-L58"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -277,6 +278,7 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5av-su-c0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xzm-M4-guR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2934" y="-760"/>
         </scene>
