@@ -9,7 +9,8 @@
 import UIKit
 
 class AllCitiesController: UITableViewController {
-
+    var citiesArray = ["Moscow", "Krasnodar", "Rostov", "London"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,20 +18,21 @@ class AllCitiesController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return citiesArray.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "AllCitiesCell", for: indexPath) as? AllCitiesCell {
+            let city = citiesArray[indexPath.row]
+            cell.cityName.text = city
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
 }
