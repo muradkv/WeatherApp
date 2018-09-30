@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA0A3DC121616A0500470365 /* AllCitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A3DC021616A0500470365 /* AllCitiesController.swift */; };
 		FA0A3DC321616A1F00470365 /* AllCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A3DC221616A1F00470365 /* AllCitiesCell.swift */; };
+		FA0A3DC62161729D00470365 /* MyCitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A3DC52161729D00470365 /* MyCitiesController.swift */; };
+		FA0A3DC8216172B000470365 /* MyCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A3DC7216172B000470365 /* MyCitiesCell.swift */; };
 		FA408A7A21582FF8001F17E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA408A7921582FF8001F17E3 /* AppDelegate.swift */; };
 		FA408A7F21582FF8001F17E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA408A7D21582FF8001F17E3 /* Main.storyboard */; };
 		FA408A8121582FF9001F17E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA408A8021582FF9001F17E3 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		FA0A3DC021616A0500470365 /* AllCitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCitiesController.swift; sourceTree = "<group>"; };
 		FA0A3DC221616A1F00470365 /* AllCitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCitiesCell.swift; sourceTree = "<group>"; };
+		FA0A3DC52161729D00470365 /* MyCitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCitiesController.swift; sourceTree = "<group>"; };
+		FA0A3DC7216172B000470365 /* MyCitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCitiesCell.swift; sourceTree = "<group>"; };
 		FA408A7621582FF8001F17E3 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA408A7921582FF8001F17E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA408A7E21582FF8001F17E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +52,15 @@
 			path = AllCities;
 			sourceTree = "<group>";
 		};
+		FA0A3DC42161727800470365 /* MyCities */ = {
+			isa = PBXGroup;
+			children = (
+				FA0A3DC52161729D00470365 /* MyCitiesController.swift */,
+				FA0A3DC7216172B000470365 /* MyCitiesCell.swift */,
+			);
+			path = MyCities;
+			sourceTree = "<group>";
+		};
 		FA408A6D21582FF8001F17E3 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +80,7 @@
 		FA408A7821582FF8001F17E3 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA0A3DC42161727800470365 /* MyCities */,
 				FA0A3DBF2161689900470365 /* AllCities */,
 				FA408A7921582FF8001F17E3 /* AppDelegate.swift */,
 				FA408A7D21582FF8001F17E3 /* Main.storyboard */,
@@ -149,9 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0A3DC8216172B000470365 /* MyCitiesCell.swift in Sources */,
 				FA0A3DC321616A1F00470365 /* AllCitiesCell.swift in Sources */,
 				FA408A7A21582FF8001F17E3 /* AppDelegate.swift in Sources */,
 				FA408A8E21584CB7001F17E3 /* LoginFormController.swift in Sources */,
+				FA0A3DC62161729D00470365 /* MyCitiesController.swift in Sources */,
 				FA0A3DC121616A0500470365 /* AllCitiesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

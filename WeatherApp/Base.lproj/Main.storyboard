@@ -150,23 +150,37 @@
             </objects>
             <point key="canvasLocation" x="1940" y="26.53673163418291"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My Cities Controller-->
         <scene sceneID="ava-ao-hQ7">
             <objects>
-                <tableViewController id="NKJ-4s-M75" sceneMemberID="viewController">
+                <tableViewController id="NKJ-4s-M75" customClass="MyCitiesController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bPG-Hj-5fp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell1" id="U9Z-hx-QNb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCitiesCell" id="U9Z-hx-QNb" customClass="MyCitiesCell" customModule="WeatherApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U9Z-hx-QNb" id="TAJ-oZ-FfC">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-cL-T7J">
+                                            <rect key="frame" x="15" y="11.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7hT-cL-T7J" secondAttribute="trailing" constant="15" id="3gK-Qn-JLe"/>
+                                        <constraint firstItem="7hT-cL-T7J" firstAttribute="leading" secondItem="TAJ-oZ-FfC" secondAttribute="leading" constant="15" id="uuY-tq-OsG"/>
+                                        <constraint firstItem="7hT-cL-T7J" firstAttribute="centerY" secondItem="TAJ-oZ-FfC" secondAttribute="centerY" id="xDm-FE-EXD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cityName" destination="7hT-cL-T7J" id="gCu-hC-las"/>
                                     <segue destination="VQv-AG-VLe" kind="show" id="Hbd-8z-ZtI"/>
                                 </connections>
                             </tableViewCell>
